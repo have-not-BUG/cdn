@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+        name="viewport">
+    <title>Title</title>
+  <script src="https://js.fundebug.cn/fundebug.2.0.0.min.js"    crossorigin="anonymous"></script>
+  <script>
+    if ("fundebug" in window) {
+      fundebug.init({
+        apikey: "xxxxx",
+        silentDev : true,
+        silentConsole : true,
+        setHttpBody: true
+      });
+    }
+  </script>
+  <script src="./monitorFileApiError.js?name=项目名称测试&allWrapId=allWrap&errNoNotAlert=true" data-attr="monitor-file-api-error"></script>
+
+  <link rel="stylesheet" href="./reprot-response-width-lr-pc-min.css">
+
+
+</head>
+<body>
+<div id="allWrap">测试</div>
+<script src="./reportself.js?name=report文件&right=true" data-attr="licai-reportself"></script>
+
+<!--<div id="reprot-problem-licai200316">-->
+  <!--反<br>馈<br>网<br>页<br>问<br>题<br>-->
+<!--</div>-->
+
+<!--<div class="msg-box-ct-lc20200612 hide">-->
+  <!--<div class="msg-title-ct">标题</div>-->
+  <!--<div class="msg-body-ct">-->
+    <!--<div class="msg-body-input-ct">-->
+      <!--<input type="text" title="prompt" class="msg-body-input" placeholder="点击此处输入文字">-->
+    <!--</div>-->
+    <!--<p class="msg-body-title hide">确定执行此操作?</p>-->
+  <!--</div>-->
+  <!--<div class="msg-bottom-ct">-->
+    <!--<div class="alert sure hide">确定</div>-->
+    <!--<div class="prompt-btn-ct">-->
+      <!--<span class="cancel">取消</span>-->
+      <!--<span class="sure">确定</span>-->
+    <!--</div>-->
+    <!--<div class="confirm-btn-ct hide">-->
+      <!--<span class="cancel">取消</span>-->
+      <!--<span class="sure">确定</span>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="cover-ct-lc20200612 hide"></div>-->
+<!--<div  class="warn-tip-lc20200612 hide"></div>-->
+
+<!--<div id="reprot-problem-licai200316" style="background-color:rgba(0,0,0,.75);color:#fff;position:fixed;top:50%;-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-ms-transform:translate(0,-50%);-o-transform:translate(0,-50%);transform:translate(0,-50%);right:0;font-size:12px;padding:10px 8px;-webkit-border-bottom-left-radius:6px;-moz-border-radius-bottomleft:6px;border-bottom-left-radius:6px;-webkit-border-top-left-radius:6px;-moz-border-radius-topleft:6px;border-top-left-radius:6px;text-align:center">-->
+  <!--反<br>馈<br>问<br>题<br>?-->
+<!--</div>-->
+</body>
+<script src="./jQuery.v1.12.4.js"></script>
+
+<script>
+  // function ajax(opts){
+  //   var xhr=new XMLHttpRequest();
+  //   xhr.onreadystatechange=function() {
+  //     if (xhr.readyState === 4) {
+  //       if(xhr.status === 200){
+  //         opts.success(JSON.parse(xhr.responseText));
+  //       }else {
+  //         opts.error('status'+xhr.status);
+  //       }
+  //     }
+  //     // if (xhr.readyState === 4 && xhr.status === 404) {
+  //     //   opts.error();
+  //     // }
+  //   };
+  //
+  //   if (opts.type.toLowerCase()==="get"){
+  //     var dataStr="";
+  //     for (var key in opts.data){
+  //       dataStr+=key+"="+opts.data[key]+"&";
+  //     }
+  //     dataStr=dataStr.substr(0,dataStr.length-1);
+  //     xhr.open("get",opts.url+"?"+dataStr,true);
+  //     xhr.send(null);
+  //
+  //   }
+  //   if (opts.type.toLowerCase()==="post"){
+  //     xhr.open("post",opts.url,true);
+  //     // xhr.setRequestHeader("Content-Type",opts.contentType? opts.contentType:"application/x-www-form-urlencoded");
+  //     xhr.send(opts.data);
+  //   }
+  //
+  //
+  // }
+
+  setTimeout(()=>{
+    $.ajax({
+      type: 'POST',
+      url: 'http://127.0.0.1:9991/v1/userinfo',
+      data:
+        {
+          game_id: 8,
+          union_id: 'adfaf335656',
+          start_date:'2020-07-17',
+          end_date:'2020-07-27'
+        },
+      success: function (res) {
+        if (Number(res.errno) === 0) {
+          console.log('请求成功')
+        }else {
+          console.log('errno 不为0')
+        }
+      },
+      error: function (err) {
+        console.log('请求出错了'+err)
+      }
+    })
+  },3000)
+
+
+
+
+
+
+
+
+</script>
+<!--<script src="js/notchange/reportself.js?name=项目名称&notStorageKeys=test1,test2"  data-attr="licai-reportself"></script>-->
+<!--<script src="js/notchange/monitorFileApiError.js?name=项目名称&notStorageKeys=test1,test2"  data-attr="licai-reportself"></script>-->
+<!--<script src="js/notchange/report.js"></script>-->
+<!--<script>-->
+
+
+  <!--function hasClass(el, cls) {-->
+    <!--var reg = new RegExp('(\\s|^)' + cls + '(\\b|$)','g');-->
+    <!--return reg.test(el.className);-->
+  <!--}-->
+
+  <!--function addClass(el, cls) {-->
+    <!--var reg = new RegExp('(\\s|^)' + cls + '(\\b|$)','g');-->
+    <!--if (!reg.test(el.className)) {-->
+      <!--return  el.className += ' ' + cls;-->
+    <!--}-->
+  <!--}-->
+
+  <!--function removeClass(el, cls) {-->
+    <!--var reg = new RegExp('(\\s|^)' + cls + '(\\b|$)','g');-->
+    <!--if (reg.test(el.className)) {-->
+      <!--return  el.className = el.className.replace(reg, '');-->
+    <!--}-->
+  <!--}-->
+
+  <!--// console.log(removeClass(document.querySelector('.msg-body-title'),'hide'))-->
+
+  <!--var coverCt=document.getElementsByClassName('cover-ct-lc20200612')[0];-->
+  <!--var msgBoxCt=document.getElementsByClassName('msg-box-ct-lc20200612')[0];-->
+  <!--var reprotProblemBtn=document.getElementById('reprot-problem-licai200316');-->
+  <!--var msgTitle=document.querySelector('.msg-box-ct-lc20200612 .msg-title-ct');-->
+  <!--var promptSureBtn=document.querySelector('.msg-box-ct-lc20200612 .prompt-btn-ct .sure');-->
+  <!--var promptCancelBtn=document.querySelector('.msg-box-ct-lc20200612 .prompt-btn-ct .cancel');-->
+  <!--var promptBtnCt=document.querySelector('.msg-box-ct-lc20200612 .prompt-btn-ct');-->
+  <!--var confirmSureBtn=document.querySelector('.msg-box-ct-lc20200612 .confirm-btn-ct .sure');-->
+  <!--var confirmCancelBtn=document.querySelector('.msg-box-ct-lc20200612 .confirm-btn-ct .cancel');-->
+  <!--var confirmBtnCt=document.querySelector('.msg-box-ct-lc20200612 .confirm-btn-ct');-->
+  <!--var msgBodyTitle=document.querySelector('.msg-box-ct-lc20200612 .msg-body-title');-->
+  <!--var msgBodyInputCt=document.querySelector('.msg-box-ct-lc20200612 .msg-body-input-ct');-->
+  <!--var alertBtn=document.querySelector('.msg-box-ct-lc20200612 .msg-bottom-ct .alert');-->
+
+
+  <!--function openMsgBox(obj) {-->
+    <!--removeClass(coverCt,'hide')-->
+    <!--removeClass(msgBoxCt,'hide')-->
+    <!--msgTitle.innerText=obj.title-->
+
+
+  <!--}-->
+
+  <!--function closeMsgBox() {-->
+
+    <!--msgTitle.innerText='标题'-->
+    <!--addClass(coverCt,'hide')-->
+    <!--addClass(msgBoxCt,'hide')-->
+  <!--}-->
+
+  <!--function switchElementHideOrShow(type) {-->
+    <!--const elementHideOrShow= {-->
+      <!--'alertType':function () {-->
+        <!--removeClass(msgBodyTitle,'hide')-->
+        <!--addClass(confirmBtnCt,'hide')-->
+        <!--removeClass(alertBtn,'hide')-->
+        <!--addClass(msgBodyInputCt,'hide')-->
+        <!--addClass(promptBtnCt,'hide')-->
+      <!--},-->
+      <!--'confirmType':function () {-->
+        <!--removeClass(msgBodyTitle,'hide')-->
+        <!--removeClass(confirmBtnCt,'hide')-->
+        <!--addClass(alertBtn,'hide')-->
+        <!--addClass(msgBodyInputCt,'hide')-->
+        <!--addClass(promptBtnCt,'hide')-->
+      <!--},-->
+      <!--'promptType':function () {-->
+        <!--addClass(msgBodyTitle,'hide')-->
+        <!--addClass(confirmBtnCt,'hide')-->
+        <!--addClass(alertBtn,'hide')-->
+        <!--removeClass(msgBodyInputCt,'hide')-->
+        <!--removeClass(promptBtnCt,'hide')-->
+      <!--}-->
+
+    <!--};-->
+    <!--return elementHideOrShow[type]()-->
+
+  <!--}-->
+
+  <!--function showAlertAndDoSome(obj) {-->
+    <!--// obj={-->
+    <!--//   title:'标题',-->
+    <!--//   text:'您没有权限!',-->
+    <!--//   sureCallbackFn:alertCallback-->
+    <!--// };-->
+    <!--openMsgBox(obj)-->
+
+    <!--switchElementHideOrShow('alertType');-->
+
+
+    <!--// addClass(msgBodyInputCt,'hide')-->
+    <!--// addClass(promptBtnCt,'hide')-->
+    <!--// addClass(confirmBtnCt,'hide')-->
+    <!--// removeClass(alertBtn,'hide')-->
+    <!--// removeClass(msgBodyTitle,'hide')-->
+
+    <!--if(obj.text){-->
+      <!--document.querySelector('.msg-box-ct-lc20200612 .msg-body-title').innerText=obj.text-->
+    <!--}-->
+    <!--alertBtn.removeEventListener('click',obj.sureCallbackFn,false);-->
+    <!--alertBtn.addEventListener('click',obj.sureCallbackFn,false);-->
+
+
+
+  <!--}-->
+
+
+  <!--function alertSureCallback() {-->
+    <!--console.log('alert 点击了确定')-->
+    <!--closeMsgBox()-->
+  <!--}-->
+
+
+  <!--function showConfirmAndDoSome(obj) {-->
+    <!--// obj={-->
+    <!--//   title:'标题',-->
+    <!--//   text:'确定执行此操作?'-->
+    <!--//   sureCallbackFn:confirmSureCallback,-->
+    <!--//   cancelCallbackFn:confirmcancelCallback,-->
+    <!--// }-->
+    <!--openMsgBox(obj);-->
+    <!--switchElementHideOrShow('confirmType');-->
+
+    <!--// addClass(msgBodyInputCt,'hide')-->
+    <!--// addClass(promptBtnCt,'hide')-->
+    <!--// addClass(alertBtn,'hide')-->
+    <!--// removeClass(confirmBtnCt,'hide')-->
+    <!--// removeClass(msgBodyTitle,'hide')-->
+
+    <!--if(obj.text){-->
+      <!--document.querySelector('.msg-box-ct-lc20200612 .msg-body-title').innerText=obj.text-->
+    <!--}-->
+    <!--confirmSureBtn.removeEventListener('click',obj.sureCallbackFn,false);-->
+    <!--confirmSureBtn.addEventListener('click',obj.sureCallbackFn,false);-->
+    <!--confirmCancelBtn.removeEventListener('click',obj.cancelCallbackFn,false);-->
+    <!--confirmCancelBtn.addEventListener('click',obj.cancelCallbackFn,false);-->
+
+
+
+  <!--}-->
+
+
+
+
+  <!--function getUrl(isIframe,problem) {-->
+    <!--var allLocalStorageInURL=putStorageInURL('localStorage','&licaiLS');-->
+    <!--var allSessionStorageInURL=putStorageInURL('sessionStorage','&licaiSS');-->
+    <!--// return  'http://127.0.0.1:3000/test.html?otherinfo=reprotProblem&from='+window.encodeURIComponent(window.location.href)+'&project='+isIframe+window.location.host+problem+'&allLocalStorage='+window.encodeURIComponent(allLocalStorageInURL);-->
+    <!--return  'https://h5.718.com/ios/test.html?otherinfo=reprotProblem&from='+window.encodeURIComponent(window.location.href)+'&project='+isIframe+window.location.host+problem+'&allLocalStorage='+window.encodeURIComponent(allLocalStorageInURL)+'&allSessionStorage='+window.encodeURIComponent(allSessionStorageInURL);-->
+  <!--}-->
+
+  <!--function putStorageInURL(storageType,searchWord) {-->
+    <!--var allStorageInURL='';-->
+    <!--for(var i=0; i<window[storageType].length;i++){-->
+      <!--allStorageInURL=allStorageInURL+searchWord+window[storageType].key(i)+'='+window[storageType].getItem(window[storageType].key(i))-->
+      <!--// console.log('window.localStorage里存储的第'+i+'条数据的名字为：'+window.localStorage.key(i)+',值为：'+window.localStorage.getItem(window.localStorage.key(i)));-->
+    <!--}-->
+    <!--return allStorageInURL-->
+  <!--}-->
+
+
+
+
+  <!--function confirmSureCallback() {-->
+    <!--document.querySelector('.msg-box-ct-lc20200612 .msg-body-input').value='';-->
+    <!--window.location.href=getUrl('NotIframe',problem);-->
+    <!--problem='';-->
+    <!--console.log('confirm 点击了确定')-->
+    <!--closeMsgBox()-->
+  <!--}-->
+  <!--function confirmCancelCallback() {-->
+    <!--if(document && document.body){-->
+      <!--var _frm0 = document? document.createElement("iframe"):'';-->
+      <!--if(_frm0 && document && document.body){-->
+        <!--_frm0.style.display = "none";-->
+        <!--// _frm.src = 'https://h5.718.com/ios/test.html?otherinfo=iframe';-->
+        <!--// _frm0.src='https://h5.718.com/ios/test.html?otherinfo=reprotProblemByIframe&from='+window.encodeURIComponent(window.location.href)+'&project=ByIframe '+window.location.href+problem;-->
+        <!--_frm0.src=getUrl('isIframe',problem)-->
+        <!--document.body.appendChild(_frm0);-->
+      <!--}-->
+
+    <!--}-->
+    <!--document.querySelector('.msg-box-ct-lc20200612 .msg-body-input').value='';-->
+    <!--problem=''-->
+
+    <!--console.log('confirm 点击了取消')-->
+    <!--closeMsgBox()-->
+  <!--}-->
+
+
+
+  <!--function showPromptAndDoSome(obj) {-->
+    <!--// obj={-->
+    <!--//   title:'请输入问题',-->
+    <!--//   text:'默认值',-->
+    <!--//   sureCallbackFn:promptSureCallback,-->
+    <!--//   cancelCallbackFn:promptcancelCallback,-->
+    <!--// }-->
+    <!--openMsgBox(obj);-->
+    <!--// 展示input 隐藏中间一行字-->
+    <!--switchElementHideOrShow('promptType');-->
+    <!--// addClass(msgBodyTitle,'hide')-->
+    <!--// addClass(confirmBtnCt,'hide')-->
+    <!--// addClass(alertBtn,'hide')-->
+    <!--// removeClass(promptBtnCt,'hide')-->
+    <!--// removeClass(msgBodyInputCt,'hide')-->
+
+
+    <!--if(obj.text){-->
+      <!--document.querySelector('.msg-box-ct-lc20200612 .msg-body-input').value=obj.text-->
+    <!--}-->
+    <!--promptSureBtn.removeEventListener('click',obj.sureCallbackFn,false);-->
+    <!--promptSureBtn.addEventListener('click',obj.sureCallbackFn,false);-->
+
+    <!--promptCancelBtn.removeEventListener('click',obj.cancelCallbackFn,false);-->
+    <!--promptCancelBtn.addEventListener('click',obj.cancelCallbackFn,false);-->
+
+    <!--// promptSureBtn.addEventListener('click',function () {-->
+    <!--//   callback(document.querySelector('.msg-box-ct-lc20200612 .msg-body-input').value);-->
+    <!--//   console.log('策划')-->
+    <!--//   closeMsgBox()-->
+    <!--//-->
+    <!--// });-->
+
+  <!--}-->
+
+  <!--var problem;-->
+
+  <!--function promptSureCallback() {-->
+    <!--problem=document.querySelector('.msg-box-ct-lc20200612 .msg-body-input').value;-->
+    <!--console.log('在prompt点击了确定:'+problem)-->
+    <!--if(!problem){-->
+      <!--warningTip('您没有输入文字', 2, true)-->
+      <!--return-->
+    <!--}-->
+    <!--// console.log('e',e)-->
+    <!--closeMsgBox();-->
+
+    <!--showConfirmAndDoSome({-->
+      <!--title:'提示',-->
+      <!--text:"是否需要进一步详细反馈问题?(点击'确定'后您可截图/录屏反馈问题)",-->
+      <!--sureCallbackFn:confirmSureCallback,-->
+      <!--cancelCallbackFn:confirmCancelCallback-->
+    <!--})-->
+  <!--}-->
+  <!--function promptcancelCallback() {-->
+
+    <!--console.log('在prompt点击了取消')-->
+    <!--document.querySelector('.msg-box-ct-lc20200612 .msg-body-input').value='';-->
+    <!--closeMsgBox();-->
+    <!--// showAlertAndDoSome({-->
+    <!--//     title:'标题',-->
+    <!--//     text:'您没有权限!',-->
+    <!--//     sureCallbackFn:alertSureCallback-->
+    <!--// })-->
+
+  <!--}-->
+
+
+  <!--reprotProblemBtn.addEventListener('click',function () {-->
+    <!--// showAlertAndDoSome({-->
+    <!--//     title:'标题',-->
+    <!--//     text:'您没有权限!',-->
+    <!--//     callbackFn:alertCallback-->
+    <!--// })-->
+
+    <!--showPromptAndDoSome({-->
+      <!--title:'请务必【详细】填写出问题之前您的操作过程及出现问题时的表现或提示',-->
+      <!--text:'',-->
+      <!--sureCallbackFn:promptSureCallback,-->
+      <!--cancelCallbackFn:promptcancelCallback-->
+    <!--});-->
+    <!--// showConfirmAndDoSome({-->
+    <!--//   title:'提示',-->
+    <!--//   text:'确定执行？',-->
+    <!--//   sureCallbackFn:confirmSureCallback,-->
+    <!--//   cancelCallbackFn:confirmCancelCallback-->
+    <!--// })-->
+  <!--});-->
+
+
+
+
+
+  <!--//-->
+  <!--// 定义提示框方法-->
+  <!--function warningTip(message, time, isShow) {-->
+    <!--var warnTipElement = document.getElementsByClassName('warn-tip-lc20200612')[0];-->
+    <!--if(warnTipElement){-->
+      <!--if (isShow) {-->
+        <!--warnTipElement.innerHTML = '<p>'+message+'</p>';-->
+        <!--removeClass(warnTipElement,'hide')-->
+        <!--// warnTipElement.style.display = 'block';-->
+      <!--} else {-->
+        <!--// warnTipElement.style.display = 'none';-->
+        <!--addClass(warnTipElement,'hide')-->
+      <!--}-->
+      <!--if (time) {-->
+        <!--setTimeout(function () {-->
+          <!--// warnTipElement.style.display = 'none'-->
+          <!--addClass(warnTipElement,'hide')-->
+        <!--}, time*1000)-->
+      <!--}-->
+    <!--}-->
+
+
+  <!--}-->
+  <!--// warningTip('测试', 500000, true)-->
+
+<!--</script>-->
+
+<!--<script>-->
+  <!--// var reprotProblemLicai200316 = document.createElement('div');-->
+  <!--// reprotProblemLicai200316.innerHTML='<div id="reprot-problem-licai200316" style="background-color:rgba(0,0,0,.75);color:#fff;position:fixed;top:50%;-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-ms-transform:translate(0,-50%);-o-transform:translate(0,-50%);transform:translate(0,-50%);right:0;font-size:12px;padding:10px 8px;-webkit-border-bottom-left-radius:6px;-moz-border-radius-bottomleft:6px;border-bottom-left-radius:6px;-webkit-border-top-left-radius:6px;-moz-border-radius-topleft:6px;border-top-left-radius:6px;text-align:center">\n' +-->
+  <!--//   '  反<br>馈<br>问<br>题<br>?\n' +-->
+  <!--//   '</div>';-->
+  <!--// document.body.appendChild(reprotProblemLicai200316)-->
+
+
+
+  <!--// document.getElementById('reprot-problem-licai200316').addEventListener('click',function (ev) {-->
+  <!--//-->
+  <!--//  // var  problem=prompt('请在下方输入框填写您所遇到的问题。重要提示：请务必在出问题的浏览器上填写。','');-->
+  <!--//  // if(problem){-->
+  <!--//  //  if(confirm('是否需要跳转至诊断页面进行详细反馈问题? 重要提示：跳转前请注意保存当前页面信息。')){-->
+  <!--//  //    window.location.href='https://h5.718.com/ios/test.html?otherinfo=reprotProblemByNotIframe'+'&from='+window.encodeURIComponent(window.location.href)+'&project='+window.location.host+problem;-->
+  <!--//  //-->
+  <!--//  //  }else {-->
+  <!--//  //    if(document && document.body){-->
+  <!--//  //      var _frm0 = document? document.createElement("iframe"):'';-->
+  <!--//  //      if(_frm0 && document && document.body){-->
+  <!--//  //        _frm0.style.display = "none";-->
+  <!--//  //        // _frm.src = 'https://h5.718.com/ios/test.html?otherinfo=iframe';-->
+  <!--//  //        _frm0.src='https://h5.718.com/ios/test.html?otherinfo=reprotProblemByIframe&from='+window.encodeURIComponent(window.location.href)+'&project=ByIframe'+window.location.host+problem;-->
+  <!--//  //        document.body.appendChild(_frm0);-->
+  <!--//  //      }-->
+  <!--//  //-->
+  <!--//  //    }-->
+  <!--//  //-->
+  <!--//  //  }-->
+  <!--//  //-->
+  <!--//  // }-->
+  <!--//-->
+  <!--//-->
+  <!--//   // if(confirm('重要提示！1、点击“确定”或“OK”后会跳转至问题反馈页面，请注意保存当前页面信息。2、请务必在出问题的浏览器上进行反馈')){-->
+  <!--//   //   console.log('是出问题的浏览器')-->
+  <!--//   //   window.location.href='https://h5.718.com/ios/test.html?otherinfo=reprotProblemByNotIframe'+'&from='+window.encodeURIComponent(window.location.href)+'&project='+window.location.origin;-->
+  <!--//   //-->
+  <!--//   // }-->
+  <!--// })-->
+<!--</script>-->
+<!--<script>-->
+  <!--var reprotProblemLicai200316 = document.createElement('div');-->
+  <!--reprotProblemLicai200316.innerHTML='<div id="reprot-problem-licai200316" style="background-color:rgba(0,0,0,.75);color:#fff;position:fixed;top:50%;-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-ms-transform:translate(0,-50%);-o-transform:translate(0,-50%);transform:translate(0,-50%);right:0;font-size:12px;padding:10px 8px;-webkit-border-bottom-left-radius:6px;-moz-border-radius-bottomleft:6px;border-bottom-left-radius:6px;-webkit-border-top-left-radius:6px;-moz-border-radius-topleft:6px;border-top-left-radius:6px;text-align:center">\n' +-->
+    <!--'  反<br>馈<br>问<br>题<br>?\n' +-->
+    <!--'</div>';-->
+  <!--document.body.appendChild(reprotProblemLicai200316)-->
+
+
+
+  <!--document.getElementById('reprot-problem-licai200316').addEventListener('click',function (ev) {-->
+   <!--var  problem=prompt('请在下方输入框填写您所遇到的问题。重要提示：请务必在出问题的浏览器上填写。','');-->
+   <!--if(problem){-->
+    <!--if(confirm('是否需要跳转至诊断页面进行详细反馈问题? 重要提示：跳转前请注意保存当前页面信息。')){-->
+      <!--window.location.href='https://h5.718.com/ios/test.html?otherinfo=reprotProblemByNotIframe'+'&from='+window.encodeURIComponent(window.location.href)+'&project='+window.location.host+problem;-->
+
+    <!--}else {-->
+      <!--if(document && document.body){-->
+        <!--var _frm0 = document? document.createElement("iframe"):'';-->
+        <!--if(_frm0 && document && document.body){-->
+          <!--_frm0.style.display = "none";-->
+          <!--// _frm.src = 'https://h5.718.com/ios/test.html?otherinfo=iframe';-->
+          <!--_frm0.src='https://h5.718.com/ios/test.html?otherinfo=reprotProblemByIframe&from='+window.encodeURIComponent(window.location.href)+'&project=ByIframe'+window.location.host+problem;-->
+          <!--document.body.appendChild(_frm0);-->
+        <!--}-->
+
+      <!--}-->
+
+    <!--}-->
+
+   <!--}-->
+
+
+    <!--// if(confirm('重要提示！1、点击“确定”或“OK”后会跳转至问题反馈页面，请注意保存当前页面信息。2、请务必在出问题的浏览器上进行反馈')){-->
+    <!--//   console.log('是出问题的浏览器')-->
+    <!--//   window.location.href='https://h5.718.com/ios/test.html?otherinfo=reprotProblemByNotIframe'+'&from='+window.encodeURIComponent(window.location.href)+'&project='+window.location.origin;-->
+    <!--//-->
+    <!--// }-->
+  <!--})-->
+<!--</script>-->
+
+
+</html>
